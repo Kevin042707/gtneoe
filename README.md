@@ -1,2 +1,2 @@
 # gtneoe
-Credit: Chatgpt
+Author: Kevin Cordova. Credit: Chatgpt and Github
