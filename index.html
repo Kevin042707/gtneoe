@@ -11,7 +11,7 @@
       padding: 20px;
     }
 
-    h1, h2, h3 {
+    h1, h3 {
       color: blue;
     }
 
@@ -42,7 +42,7 @@
 </head>
 <body>
   <h1>Getting To Know Each Other</h1>
-  <h2>Kevin Cordova's Introduction Website</h2>
+  <h2 id="myname" onclick="changeColor()">Kevin Cordova's Introduction Website</h2>
   <img src="https://github.com/Kevin042707/gtneoe/blob/main/me.png?raw=true" 
      alt="Kevin Cordova" width="300">
 
@@ -68,7 +68,7 @@
     <p>Hanging out with family and friends</p>
     <p><a href="https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship">Learn more about the UFC</a></p>
   </section>
-  
+
   <section>
     <h3>My Favorite Things</h3>
     <table>
@@ -81,12 +81,12 @@
         <td>Tacos</td>
       </tr>
       <tr>
-        <td>Show</td>
-        <td>Breaking Bad</td>
+        <td>Movie</td>
+        <td>Inception</td>
       </tr>
       <tr>
-        <td>Sport</td>
-        <td>MMA</td>
+        <td>Music</td>
+        <td>Hip Hop</td>
       </tr>
     </table>
   </section>
@@ -100,6 +100,10 @@
   <script>
     function showFact() {
       document.getElementById("funfact").style.display = "block";
+    }
+
+    function changeColor() {
+      document.getElementById("Kevin Cordova").style.color = "blue"; 
     }
   </script>
 </body>
