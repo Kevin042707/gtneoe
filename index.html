@@ -38,20 +38,6 @@
     th {
       background-color: #e0e0ff;
     }
-
-    /* Dark mode styling */
-    .dark-mode {
-      background: #222;
-      color: white;
-    }
-    .dark-mode section {
-      background: #333;
-      color: #fff;
-      box-shadow: 2px 2px 8px rgba(255,255,255,0.1);
-    }
-    .dark-mode th {
-      background-color: #444;
-    }
   </style>
 </head>
 <body>
@@ -82,8 +68,7 @@
     <p>Hanging out with family and friends</p>
     <p><a href="https://en.wikipedia.org/wiki/Ultimate_Fighting_Championship">Learn more about the UFC</a></p>
   </section>
-
-  <!-- HTML Enhancement: Table -->
+  
   <section>
     <h3>My Favorite Things</h3>
     <table>
@@ -96,38 +81,26 @@
         <td>Tacos</td>
       </tr>
       <tr>
-        <td>Movie</td>
-        <td>Inception</td>
+        <td>Show</td>
+        <td>Breaking Bad</td>
       </tr>
       <tr>
-        <td>Music</td>
-        <td>Hip Hop</td>
+        <td>Sport</td>
+        <td>MMA</td>
       </tr>
     </table>
   </section>
 
-  <!-- JavaScript Enhancement: Fun Fact button -->
   <section>
     <h3>Fun fact</h3>
     <button onclick="showFact()">Click to See My Fun Fact</button>
     <p id="funfact" style="display:none;">I have a scar on my left knee from an accident.</p>
   </section>
 
-  <!-- JavaScript Enhancement: Dark mode toggle -->
-  <section>
-    <h3>Site Theme</h3>
-    <button onclick="toggleTheme()">Toggle Dark Mode</button>
-  </section>
-
   <script>
     function showFact() {
       document.getElementById("funfact").style.display = "block";
     }
-
-    function toggleTheme() {
-      document.body.classList.toggle("dark-mode");
-    }
   </script>
 </body>
 </html>
-
