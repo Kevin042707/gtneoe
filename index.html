@@ -3,54 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Kevin</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #dfe9f3, #ffffff);
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1, h3 {
-      color: blue;
-    }
-
-    section {
-      background: #f9f9f9;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #e0e0ff;
-    }
-  </style>
+  <link rel="stylesheet" href="me.css">
 </head>
 <body>
   <h1>Getting To Know Each Other</h1>
+
   <h2 id="myname" onclick="changeColor()">Kevin Cordova's Introduction Website</h2>
-  <img src="https://github.com/Kevin042707/gtneoe/blob/main/me.png?raw=true" 
-     alt="Kevin Cordova" width="300">
+
+  <img src="me.png" alt="Kevin Cordova" width="300">
 
   <section>
     <h3>Introduction</h3>
     <p>My name is Kevin Cordova. My family consists of my mom, dad, and my older sister. My major is Information Technology.</p>
     <p><a href="mailto:kevingcordova@lewisu.edu">Send me an email</a></p>
-    <p>Discord: kevin042707.</p>
+    <p>Discord: kevin042707</p>
   </section>
 
   <section>
@@ -81,12 +47,12 @@
         <td>Tacos</td>
       </tr>
       <tr>
-        <td>Movie</td>
-        <td>Inception</td>
+        <td>Show</td>
+        <td>Breaking Bad</td>
       </tr>
       <tr>
-        <td>Music</td>
-        <td>Hip Hop</td>
+        <td>Sport</td>
+        <td>MMA</td>
       </tr>
     </table>
   </section>
@@ -97,14 +63,44 @@
     <p id="funfact" style="display:none;">I have a scar on my left knee from an accident.</p>
   </section>
 
+  <section>
+    <h3>Current Time:</h3>
+    <p id="clock"></p>
+  </section>
+
+  <section>
+    <h3>Contact Me</h3>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="30" required></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
   <script>
+    // Show fun fact
     function showFact() {
       document.getElementById("funfact").style.display = "block";
     }
 
+    // Change name color
     function changeColor() {
-      document.getElementById("Kevin Cordova").style.color = "blue"; 
+      document.getElementById("myname").style.color = "blue";
     }
+
+    // Live clock
+    function updateClock() {
+      document.getElementById("clock").textContent = new Date().toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
   </script>
 </body>
 </html>
